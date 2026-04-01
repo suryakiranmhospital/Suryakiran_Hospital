@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Medical Team (Light)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0EA5E9",
+              "secondary": "#F59E0B", // Gold accent
+              "background": "#FFFFFF",
+              "surface": "#F8FAFC",
+              "on-surface": "#0F172A",
+              "on-surface-variant": "#475569",
+              "outline": "#E2E8F0",
+              "outline-variant": "#F1F5F9",
+              "surface-container": "#F1F5F9"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(14, 165, 233, 0.1);
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(14, 165, 233, 0.25);
+        }
+        .sunray-glow-light {
+            box-shadow: 0 10px 40px rgba(14, 165, 233, 0.05);
+        }
+        .sunray-glow-light:hover {
+            box-shadow: 0 20px 50px rgba(14, 165, 233, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/20">
+<!-- TopNavBar Component (from COMPONENTS_10) -->
+<nav class="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-[0_8px_40px_rgba(25,28,30,0.04)] font-['Inter'] antialiased tracking-tight border-b border-slate-100">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-2xl font-bold tracking-tighter text-sky-900">Suryakiran</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 hover:text-sky-500 transition-colors" href="#">Home</a>
+<a class="text-slate-600 hover:text-sky-500 transition-colors" href="#">Departments</a>
+<a class="text-sky-600 font-semibold border-b-2 border-sky-600 pb-1" href="#">Doctors</a>
+<a class="text-slate-600 hover:text-sky-500 transition-colors" href="#">Patient Info</a>
+<a class="text-slate-600 hover:text-sky-500 transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 bg-rose-50 text-rose-600 rounded-full font-bold hover:bg-rose-100 active:scale-95 transition-all duration-200 uppercase text-xs tracking-widest">
+                Emergency
+            </button>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors">account_circle</span>
+</div>
+</div>
+</nav>
+<main class="relative min-h-screen">
+<!-- Abstract Background Elements -->
+<div class="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden pointer-events-none">
+<div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-sky-100 rounded-full blur-[120px] opacity-40"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-slate-100 rounded-full blur-[100px] opacity-60"></div>
+<div class="absolute top-[20%] left-[10%] w-32 h-32 bg-amber-100/30 rounded-full blur-3xl"></div>
+</div>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-16 px-8 text-center">
+<div class="max-w-4xl mx-auto">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-white border border-primary/20 text-xs font-bold tracking-[0.2em] text-primary uppercase shadow-sm">
+                Expertise &amp; Compassion
+            </span>
+<h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tighter mb-6">
+                Our Medical <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-amber-500">Luminary Team</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                Dedicated to your healing journey with world-class precision and a heart for service. Meet the experts behind Suryakiran's legacy.
+            </p>
+</div>
+</section>
+<!-- Doctors Grid -->
+<section class="max-w-7xl mx-auto px-8 pb-32">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Dr. Mahima Bilore -->
+<div class="glass-card rounded-xl overflow-hidden group sunray-glow-light transition-all duration-500 hover:-translate-y-2">
+<div class="h-80 overflow-hidden relative bg-slate-100">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Professional female surgeon Dr. Mahima Bilore" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCei838vfK9YBbMUYWIWzAp88uMzVJvvhK4HnyNJgttkte2Y2YTSR5TA1TodbcxQm1cRJ_45W51kTQRcEh53yFpkw91GPWhr2NGFz19Ma9m5oHENKxAmuc6AAMxDM0luDl7MuOZ027vdLuTsSVNjMAFHLXEBJq5eD6-daIlxqHwG5tgOc-1lLmsRM85wUDrB_RZbwpajjYwVRz9A-kVC5WaPzaklpIbJCp-i5SGdITKlyHPZbU4E3bsJzpGAPkHPJWSc7jqMMY50Flq"/>
+<div class="absolute top-4 right-4 bg-primary/10 backdrop-blur-md px-3 py-1 rounded-full border border-primary/20">
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest">Lead Surgeon</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold text-slate-900 mb-1">Dr. Mahima Bilore</h3>
+<p class="text-primary font-medium mb-4">General Surgeon</p>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                        Pioneering minimally invasive procedures with a focus on rapid recovery and patient-centric surgical excellence.
+                    </p>
+<div class="flex gap-2">
+<button class="flex-1 py-3 rounded-lg border border-slate-200 text-xs font-bold text-slate-900 uppercase tracking-widest hover:bg-slate-50 transition-colors">View Profile</button>
+<button class="p-3 rounded-lg border border-slate-200 text-primary hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-xl">medical_services</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dr. Shivam -->
+<div class="glass-card rounded-xl overflow-hidden group sunray-glow-light transition-all duration-500 hover:-translate-y-2 lg:mt-12">
+<div class="h-80 overflow-hidden relative bg-slate-100">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Experienced male cardiologist Dr. Shivam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfaLt7CGtwShoM40pF0PaKBiXu2YHDILYxLW029s2VaRFVpspUGzusg1AnaGh3hVjDhTKE6ZSssGMGmMju29Mi189RqshYJfDMl9qFd1nKiS3ovPa5wXUjrrM7hvOMT2UdKW2-dbCYab0rf9DEdEXIgYPP2nlayflwmApG-TsnZr079uXReFCeZ19OilA4Ry8jyANZl_LC7m-OU4oCFI7aZlW0dRRsmcg_Kb3by51jM2x9cFKetZBpEICxYszO1b7umVCB8ILEECQj"/>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold text-slate-900 mb-1">Dr. Shivam</h3>
+<p class="text-primary font-medium mb-4">Cardiology Expert</p>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                        Integrating advanced diagnostics with compassionate care to ensure heart health for all our patients.
+                    </p>
+<div class="flex gap-2">
+<button class="flex-1 py-3 rounded-lg border border-slate-200 text-xs font-bold text-slate-900 uppercase tracking-widest hover:bg-slate-50 transition-colors">View Profile</button>
+<button class="p-3 rounded-lg border border-slate-200 text-primary hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dr. Abhishek -->
+<div class="glass-card rounded-xl overflow-hidden group sunray-glow-light transition-all duration-500 hover:-translate-y-2">
+<div class="h-80 overflow-hidden relative bg-slate-100">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Professional male doctor Dr. Abhishek" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-X_lDfTKfDpIgWw6xhY0eKkjADL8LbqBFlDqYBhFQ2-7nCeZOAjJ6sq8twXT3NWGgpPY02-GOZ4OCZCzrVKTWWqAIGUI8nKrtqT71M-Ci3VBHl9JB9ULsWk_gYDm-3NjVsOcDKtveKxTJ4RXNaAu7rnhzeL9JujQIME0hEcbKb2ViwWw1YPbZE65JeIOlNLYFH1-mHxJ1lUr6BsE_wGabiydOZwLb-6LClsf61V5-Cl-Ak3d73ePwu91W_pK4DL8W3kWBXcp6O3rW"/>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold text-slate-900 mb-1">Dr. Abhishek</h3>
+<p class="text-primary font-medium mb-4">Internal Medicine</p>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                        Specializing in complex diagnostics and holistic wellness strategies for long-term health sustainability.
+                    </p>
+<div class="flex gap-2">
+<button class="flex-1 py-3 rounded-lg border border-slate-200 text-xs font-bold text-slate-900 uppercase tracking-widest hover:bg-slate-50 transition-colors">View Profile</button>
+<button class="p-3 rounded-lg border border-slate-200 text-primary hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-xl">stethoscope</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dr. Sangeeta Chatterjee -->
+<div class="glass-card rounded-xl overflow-hidden group sunray-glow-light transition-all duration-500 hover:-translate-y-2">
+<div class="h-80 overflow-hidden relative bg-slate-100">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Senior female physician Dr. Sangeeta Chatterjee" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1NVjFoqH_IuAM_nEofYVuI2zPN_Q7BD5gEDBB0dICGbM27Z3MRZJFV2P8ahYARGxSrBcj4MopaXVTLslluBAkz6XABNSOlse8v1sOZ0ULbAd55OO0K8f0ywUBWk-0kzZrKKpVmfxPzZjxWH6HdPeylAdX5OHUOZJ0RUL8xglhjKdFC9oGvTddguXaFp1EiN7QhXBb2VmpwNjf0Uf9PjXrR1_7SD81LXRemAbI55aEXAU-ayIl-zP59JMd-Jv_qm4psUaYLy4Iw3sv"/>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold text-slate-900 mb-1">Dr. Sangeeta Chatterjee</h3>
+<p class="text-primary font-medium mb-4">Pediatrics Specialist</p>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                        Providing a gentle touch and expert care for our youngest patients, fostering a generation of health.
+                    </p>
+<div class="flex gap-2">
+<button class="flex-1 py-3 rounded-lg border border-slate-200 text-xs font-bold text-slate-900 uppercase tracking-widest hover:bg-slate-50 transition-colors">View Profile</button>
+<button class="p-3 rounded-lg border border-slate-200 text-primary hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-xl">child_care</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dr. Nilesh Ghorpade -->
+<div class="glass-card rounded-xl overflow-hidden group sunray-glow-light transition-all duration-500 hover:-translate-y-2 lg:-mt-12">
+<div class="h-80 overflow-hidden relative bg-slate-100">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Male orthopedist Dr. Nilesh Ghorpade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTgA1BKZXGrQoqux5kT2ySYla5uXwpRdn08XHv0w_6u9W5ten8XBT_lY9T0rHsq2GedMPxaW9kDI7NGKSKSzls6iODN1d4IR5Z_hZQ1qfBeHxSrfB_LaNLKADfZnAkGHLWAsIH4JbnNMa06abdgWVIKOQl5C68ht-MthuR464_35CeUnwlnFu86CiKpNJbYgSSeVN2-pffIKq5UJ4ZYXMKQ3l4GxLt_XMk-fbI3aZ7-ABMQf8iv2LQoK7kYPrsVrXel28EEDpiy1ln"/>
+<div class="absolute bottom-4 left-4 flex gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="w-2 h-2 rounded-full bg-primary/40"></span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold text-slate-900 mb-1">Dr. Nilesh Ghorpade</h3>
+<p class="text-primary font-medium mb-4">Orthopedic Surgeon</p>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                        Advanced sports medicine and joint reconstruction focused on restoring mobility and enhancing life quality.
+                    </p>
+<div class="flex gap-2">
+<button class="flex-1 py-3 rounded-lg border border-slate-200 text-xs font-bold text-slate-900 uppercase tracking-widest hover:bg-slate-50 transition-colors">View Profile</button>
+<button class="p-3 rounded-lg border border-slate-200 text-primary hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-xl">precision_manufacturing</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Join the Team Card -->
+<div class="rounded-xl border-2 border-dashed border-primary/20 flex flex-col items-center justify-center p-8 text-center bg-sky-50/30 group hover:border-primary/50 transition-all">
+<div class="w-20 h-20 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-primary">add</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Join Our Mission</h3>
+<p class="text-on-surface-variant text-sm mb-6">Are you an expert looking to make a difference in futuristic care?</p>
+<a class="text-primary font-bold text-sm underline underline-offset-4 decoration-primary/30 hover:decoration-primary" href="#">Explore Careers</a>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="glass-card rounded-3xl p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 border border-sky-100">
+<div class="absolute inset-0 bg-gradient-to-r from-sky-50/50 to-transparent"></div>
+<div class="relative z-10 max-w-xl">
+<h2 class="text-3xl font-bold text-slate-900 mb-4 tracking-tight">Need a Consultation?</h2>
+<p class="text-on-surface-variant leading-relaxed">Our specialists are ready to provide you with the personalized care you deserve. Schedule your visit today with Suryakiran.</p>
+</div>
+<div class="relative z-10">
+<button class="bg-primary text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-sky-600 transition-all active:scale-95 shadow-lg shadow-sky-200">
+                    Book Appointment
+                </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component (from COMPONENTS_10) -->
+<footer class="bg-slate-50 w-full py-12 px-6 border-t border-slate-200/50 font-['Inter'] text-sm leading-relaxed">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+<div class="flex flex-col gap-4">
+<div class="text-lg font-bold text-slate-900">Suryakiran</div>
+<p class="text-slate-500">© 2024 Clinical Ether Health Systems. Precision Care.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-sky-700 font-bold uppercase text-[10px] tracking-widest">Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-sky-500 transition-colors" href="#">Home</a></li>
+<li><a class="text-slate-500 hover:text-sky-500 transition-colors" href="#">Departments</a></li>
+<li><a class="text-sky-600 underline" href="#">Doctors</a></li>
+<li><a class="text-slate-500 hover:text-sky-500 transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-sky-700 font-bold uppercase text-[10px] tracking-widest">Legal</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-sky-500 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-sky-500 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-slate-500 hover:text-sky-500 transition-colors" href="#">Accessibility</a></li>
+<li><a class="text-slate-500 hover:text-sky-500 transition-colors" href="#">Sitemap</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-sky-700 font-bold uppercase text-[10px] tracking-widest">Follow Us</h4>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-primary hover:bg-sky-50 transition-all cursor-pointer opacity-100 hover:opacity-80">
+<span class="material-symbols-outlined text-xl">share</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-primary hover:bg-sky-50 transition-all cursor-pointer opacity-100 hover:opacity-80">
+<span class="material-symbols-outlined text-xl">public</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
