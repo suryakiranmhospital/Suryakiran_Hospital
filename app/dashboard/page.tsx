@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { 
   Send, LogOut, MessageSquare, Image as ImageIcon, Users, Globe, 
   FileText, Loader2, CheckCircle, XCircle, ChevronDown,
-  Menu, X, Zap
+  Menu, X, Zap, Home
 } from 'lucide-react';
 
 interface Template {
@@ -120,6 +120,15 @@ export default function DashboardPage() {
     }
   };
 
+  const handleLogoutToHome = async () => {
+    try {
+      await fetch('/api/logout', { method: 'POST', credentials: 'include' });
+      router.push('/');
+    } catch {
+      router.push('/');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50">
       <nav className="bg-white/80 backdrop-blur-md border-b border-orange-100 sticky top-0 z-40">
@@ -134,6 +143,14 @@ export default function DashboardPage() {
             </div>
 
             <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+              <button
+                onClick={handleLogoutToHome}
+                className="flex items-center gap-2 px-4 py-2 text-trust-brown-600 hover:text-orange-600 hover:bg-orange-50 rounded-xl transition-colors"
+              >
+                <Home className="w-4 h-4" />
+                <span className="hidden sm:inline">Home</span>
+              </button>
               <button
                 onClick={handleLogout}
                 className="flex items-center gap-2 px-4 py-2 text-trust-brown-600 hover:text-red-600 hover:bg-red-50 rounded-xl transition-colors"
@@ -141,6 +158,7 @@ export default function DashboardPage() {
                 <LogOut className="w-4 h-4" />
                 <span className="hidden sm:inline">Logout</span>
               </button>
+            </div>
               <button
                 onClick={() => setSidebarOpen(!sidebarOpen)}
                 className="lg:hidden p-2 rounded-lg hover:bg-orange-50"
