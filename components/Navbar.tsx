@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, Phone, MapPin, Heart } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -32,25 +33,33 @@ export default function Navbar() {
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/80 backdrop-blur-md shadow-lg shadow-teal-500/10"
+          ? "bg-white/90 backdrop-blur-md shadow-lg shadow-orange-500/10"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Logo with Image */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-teal-500/30 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-xl">S</span>
+              <div className="w-12 h-12 rounded-xl overflow-hidden border-2 border-orange-500 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Image
+                  src="/images/logoo.png"
+                  alt="Suryakiran Logo"
+                  width={48}
+                  height={48}
+                  className="object-contain w-full h-full"
+                />
               </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-orange-500 to-amber-400 rounded-full animate-pulse" />
+              <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-pulse flex items-center justify-center">
+                <Heart className="w-2 h-2 text-white fill-current" />
+              </div>
             </div>
             <div className="hidden sm:block">
-              <span className="font-montserrat font-bold text-xl text-slate-800">
+              <span className="font-montserrat font-bold text-xl text-trust-maroon">
                 Suryakiran
               </span>
-              <p className="text-xs text-teal-600 -mt-1">Multispecialty Hospital</p>
+              <p className="text-xs text-orange-600 -mt-1">Multispecialty Hospital</p>
             </div>
           </Link>
 
@@ -60,10 +69,10 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="relative text-slate-700 font-medium hover:text-teal-600 transition-colors duration-300 group"
+                className="relative text-trust-brown font-medium hover:text-orange-600 transition-colors duration-300 group"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-cyan-400 group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-red-500 group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
           </div>
@@ -72,14 +81,14 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               href="/login"
-              className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-400 text-white font-medium hover:from-orange-400 hover:to-amber-300 transition-all duration-300"
+              className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-red-600 to-orange-500 text-white font-medium hover:from-red-500 hover:to-orange-400 transition-all duration-300"
             >
               Login
             </Link>
 
             <a
               href="tel:+912249634780"
-              className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-teal-50 text-teal-700 font-medium hover:bg-teal-100 transition-colors duration-300"
+              className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-heal-50 text-heal-600 font-medium hover:bg-heal-100 transition-colors duration-300"
             >
               <Phone className="w-4 h-4" />
               <span>Book Appointment</span>
@@ -88,12 +97,12 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors duration-300"
+              className="lg:hidden p-2 rounded-lg hover:bg-orange-50 transition-colors duration-300"
             >
               {isOpen ? (
-                <X className="w-6 h-6 text-slate-700" />
+                <X className="w-6 h-6 text-trust-brown" />
               ) : (
-                <Menu className="w-6 h-6 text-slate-700" />
+                <Menu className="w-6 h-6 text-trust-brown" />
               )}
             </button>
           </div>
@@ -107,7 +116,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white/95 backdrop-blur-md border-t border-slate-100"
+            className="lg:hidden bg-white/95 backdrop-blur-md border-t border-orange-100"
           >
             <div className="px-4 py-6 space-y-4">
               {navLinks.map((link) => (
@@ -115,7 +124,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block px-4 py-3 rounded-xl text-slate-700 font-medium hover:bg-teal-50 hover:text-teal-600 transition-all duration-300"
+                  className="block px-4 py-3 rounded-xl text-trust-brown font-medium hover:bg-orange-50 hover:text-orange-600 transition-all duration-300"
                 >
                   {link.name}
                 </Link>
@@ -123,14 +132,14 @@ export default function Navbar() {
               <Link
                 href="/login"
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-3 rounded-xl text-center bg-gradient-to-r from-orange-500 to-amber-400 text-white font-medium"
+                className="block px-4 py-3 rounded-xl text-center bg-gradient-to-r from-red-600 to-orange-500 text-white font-medium"
               >
                 Login
               </Link>
-              <div className="pt-4 border-t border-slate-100">
-                <div className="flex items-center gap-2 px-4 py-3 rounded-xl bg-slate-50">
-                  <MapPin className="w-5 h-5 text-teal-600" />
-                  <span className="text-sm text-slate-600">
+              <div className="pt-4 border-t border-orange-100">
+                <div className="flex items-center gap-2 px-4 py-3 rounded-xl bg-orange-50">
+                  <MapPin className="w-5 h-5 text-orange-500" />
+                  <span className="text-sm text-trust-brown">
                     Kandivali East, Mumbai-400101
                   </span>
                 </div>

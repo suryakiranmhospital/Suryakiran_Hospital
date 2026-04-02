@@ -1,8 +1,9 @@
 "use client";
 
+import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Shield, Eye, EyeOff, Loader2 } from 'lucide-react';
+import { Eye, EyeOff, Loader2, Heart } from 'lucide-react';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -39,50 +40,51 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-white to-teal-50 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 via-white to-red-50 p-4">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-teal-400/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-orange-400/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-red-400/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-heal-400/10 rounded-full blur-3xl" />
       </div>
 
       <div className="relative w-full max-w-md">
-        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl shadow-teal-500/10 border border-white/50 p-8">
+        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl shadow-orange-500/10 border border-white/50 p-8">
           <div className="text-center mb-8">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-teal-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-teal-500/30">
-              <Shield className="w-8 h-8 text-white" />
+            <div className="w-16 h-16 mx-auto mb-4 rounded-2xl overflow-hidden bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center shadow-lg shadow-orange-500/30">
+              <Image src="/images/logoo.png" alt="Logo" width={64} height={64} className="w-full h-full object-contain" />
             </div>
-            <h1 className="font-montserrat text-2xl font-bold text-slate-800">Suryakiran Hospital</h1>
-            <p className="text-slate-500 mt-1">Admin Login</p>
+            <h1 className="font-montserrat text-2xl font-bold text-trust-maroon">Suryakiran Hospital</h1>
+            <p className="text-trust-brown/60 mt-1">Admin Login</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Username</label>
+              <label className="block text-sm font-medium text-trust-brown mb-2">Username</label>
               <input
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all duration-300 outline-none"
+                className="w-full px-4 py-3 rounded-xl border border-orange-200 bg-orange-50/50 focus:bg-white focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all duration-300 outline-none"
                 placeholder="Enter username"
                 required
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Password</label>
+              <label className="block text-sm font-medium text-trust-brown mb-2">Password</label>
               <div className="relative">
                 <input
                   type={showPassword ? 'text' : 'password'}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-3 pr-12 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all duration-300 outline-none"
+                  className="w-full px-4 py-3 pr-12 rounded-xl border border-orange-200 bg-orange-50/50 focus:bg-white focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all duration-300 outline-none"
                   placeholder="Enter password"
                   required
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-trust-brown/50 hover:text-orange-600"
                 >
                   {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                 </button>
@@ -98,7 +100,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 px-4 bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-semibold rounded-xl hover:from-teal-500 hover:to-cyan-400 transition-all duration-300 shadow-lg shadow-teal-500/25 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full py-3 px-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-xl hover:from-orange-400 hover:to-red-500 transition-all duration-300 shadow-lg shadow-orange-500/25 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {loading ? (
                 <>
@@ -112,14 +114,14 @@ export default function LoginPage() {
           </form>
 
           <div className="mt-6 text-center">
-            <a href="/" className="text-sm text-slate-500 hover:text-teal-600 transition-colors">
+            <a href="/" className="text-sm text-trust-brown/60 hover:text-orange-600 transition-colors flex items-center justify-center gap-2">
               ← Back to Hospital Website
             </a>
           </div>
         </div>
 
-        <p className="text-center text-sm text-slate-400 mt-4">
-          Secure admin access • 24/7 monitoring
+        <p className="text-center text-sm text-trust-brown/40 mt-4 flex items-center justify-center gap-2">
+          Secure admin access • 24/7 monitoring <Heart className="w-4 h-4 text-red-500" />
         </p>
       </div>
     </div>

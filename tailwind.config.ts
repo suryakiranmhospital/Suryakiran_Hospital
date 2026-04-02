@@ -12,43 +12,7 @@ const config: Config = {
         montserrat: ["Montserrat", "sans-serif"],
       },
       colors: {
-        cyan: {
-          50: "#ecfeff",
-          100: "#cffafe",
-          200: "#a5f3fc",
-          300: "#67e8f9",
-          400: "#22d3ee",
-          500: "#06b6d4",
-          600: "#0891b2",
-          700: "#0e7490",
-          800: "#155e75",
-          900: "#164e63",
-        },
-        teal: {
-          50: "#f0fdfa",
-          100: "#ccfbf1",
-          200: "#99f6e4",
-          300: "#5eead4",
-          400: "#2dd4bf",
-          500: "#14b8a6",
-          600: "#0d9488",
-          700: "#0f766e",
-          800: "#115e59",
-          900: "#134e4a",
-        },
-        gold: {
-          50: "#fffbeb",
-          100: "#fef3c7",
-          200: "#fde68a",
-          300: "#fcd34d",
-          400: "#fbbf24",
-          500: "#f59e0b",
-          600: "#d97706",
-          700: "#b45309",
-          800: "#92400e",
-          900: "#78350f",
-        },
-        orange: {
+        warm: {
           50: "#fff7ed",
           100: "#ffedd5",
           200: "#fed7aa",
@@ -59,6 +23,18 @@ const config: Config = {
           700: "#c2410c",
           800: "#9a3412",
           900: "#7c2d12",
+        },
+        heal: {
+          50: "#f0fdf4",
+          100: "#dcfce7",
+          200: "#bbf7d0",
+          300: "#86efac",
+          400: "#4ade80",
+          500: "#22c55e",
+        },
+        trust: {
+          maroon: "#7f1d1d",
+          brown: "#451a03",
         },
         silver: {
           50: "#fafafa",
@@ -76,9 +52,10 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "glass-gradient": "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)",
-        "hero-gradient": "linear-gradient(135deg, #0d9488 0%, #06b6d4 50%, #22d3ee 100%)",
-        "gold-glow": "radial-gradient(ellipse at center, rgba(245,158,11,0.3) 0%, transparent 70%)",
-        "teal-glow": "radial-gradient(ellipse at center, rgba(6,182,212,0.2) 0%, transparent 70%)",
+        "hero-gradient": "linear-gradient(135deg, #f97316 0%, #dc2626 50%, #ef4444 100%)",
+        "warm-glow": "radial-gradient(ellipse at center, rgba(249,115,22,0.3) 0%, transparent 70%)",
+        "heal-glow": "radial-gradient(ellipse at center, rgba(34,197,94,0.2) 0%, transparent 70%)",
+        "red-glow": "radial-gradient(ellipse at center, rgba(220,38,38,0.2) 0%, transparent 70%)",
       },
       animation: {
         "fade-in": "fadeIn 0.8s ease-out forwards",
@@ -87,6 +64,7 @@ const config: Config = {
         "pulse-glow": "pulseGlow 4s ease-in-out infinite",
         "slide-in": "slideIn 0.5s ease-out forwards",
         "shine": "shine 2s ease-in-out infinite",
+        "heartbeat": "heartbeat 1.5s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -112,6 +90,13 @@ const config: Config = {
         shine: {
           "0%": { backgroundPosition: "200% center" },
           "100%": { backgroundPosition: "-200% center" },
+        },
+        heartbeat: {
+          "0%, 100%": { transform: "scale(1)" },
+          "14%": { transform: "scale(1.1)" },
+          "28%": { transform: "scale(1)" },
+          "42%": { transform: "scale(1.1)" },
+          "70%": { transform: "scale(1)" },
         },
       },
       backdropBlur: {

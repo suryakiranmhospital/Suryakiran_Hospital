@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { 
-  Send, LogOut, MessageSquare, Image, Users, Globe, 
+  Send, LogOut, MessageSquare, Image as ImageIcon, Users, Globe, 
   FileText, Loader2, CheckCircle, XCircle, ChevronDown,
   Menu, X, Zap
 } from 'lucide-react';
@@ -120,29 +121,29 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-teal-50">
-      <nav className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50">
+      <nav className="bg-white/80 backdrop-blur-md border-b border-orange-100 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-600 to-cyan-500 flex items-center justify-center">
-                <span className="text-white font-bold">S</span>
+              <div className="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center">
+                <Image src="/images/logoo.png" alt="Logo" width={40} height={40} className="w-full h-full object-contain" />
               </div>
-              <span className="font-montserrat font-bold text-xl text-slate-800">Suryakiran</span>
-              <span className="hidden sm:inline text-sm text-slate-500">Campaign Dashboard</span>
+              <span className="font-montserrat font-bold text-xl text-trust-maroon">Suryakiran</span>
+              <span className="hidden sm:inline text-sm text-trust-brown/60">Campaign Dashboard</span>
             </div>
 
             <div className="flex items-center gap-4">
               <button
                 onClick={handleLogout}
-                className="flex items-center gap-2 px-4 py-2 text-slate-600 hover:text-red-600 hover:bg-red-50 rounded-xl transition-colors"
+                className="flex items-center gap-2 px-4 py-2 text-trust-brown-600 hover:text-red-600 hover:bg-red-50 rounded-xl transition-colors"
               >
                 <LogOut className="w-4 h-4" />
                 <span className="hidden sm:inline">Logout</span>
               </button>
               <button
                 onClick={() => setSidebarOpen(!sidebarOpen)}
-                className="lg:hidden p-2 rounded-lg hover:bg-slate-100"
+                className="lg:hidden p-2 rounded-lg hover:bg-orange-50"
               >
                 {sidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
@@ -155,17 +156,17 @@ export default function DashboardPage() {
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-lg shadow-teal-500/10 border border-white/50 p-6">
+              <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-lg shadow-orange-500/10 border border-white/50 p-6">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-600 to-cyan-500 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
                     <Zap className="w-5 h-5 text-white" />
                   </div>
-                  <h2 className="font-montserrat font-semibold text-xl text-slate-800">Campaign Creation</h2>
+                  <h2 className="font-montserrat font-semibold text-xl text-trust-maroon">Campaign Creation</h2>
                 </div>
 
                 <div className="space-y-5">
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">
+                    <label className="block text-sm font-medium text-trust-brown-700 mb-2">
                       <FileText className="w-4 h-4 inline mr-2" />
                       Campaign Name
                     </label>
@@ -173,19 +174,19 @@ export default function DashboardPage() {
                       type="text"
                       value={formData.campaignName}
                       onChange={(e) => setFormData({ ...formData, campaignName: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all outline-none"
+                      className="w-full px-4 py-3 rounded-xl border border-orange-100 bg-orange-50/50 focus:bg-white focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all outline-none"
                       placeholder="e.g., Annual Health Checkup Campaign"
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">
+                    <label className="block text-sm font-medium text-trust-brown-700 mb-2">
                       <MessageSquare className="w-4 h-4 inline mr-2" />
                       WhatsApp Template
                     </label>
                     {loadingTemplates ? (
-                      <div className="flex items-center gap-2 text-slate-500 py-3">
+                      <div className="flex items-center gap-2 text-trust-brown-500 py-3">
                         <Loader2 className="w-4 h-4 animate-spin" />
                         Loading templates...
                       </div>
@@ -194,7 +195,7 @@ export default function DashboardPage() {
                         <select
                           value={formData.templateId}
                           onChange={(e) => handleTemplateChange(e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all outline-none appearance-none"
+                          className="w-full px-4 py-3 rounded-xl border border-orange-100 bg-orange-50/50 focus:bg-white focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all outline-none appearance-none"
                           required
                         >
                           <option value="">Select a template</option>
@@ -204,27 +205,27 @@ export default function DashboardPage() {
                             </option>
                           ))}
                         </select>
-                        <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
+                        <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-trust-brown/40 pointer-events-none" />
                       </div>
                     )}
                   </div>
 
                   {selectedTemplate && selectedTemplate.variables.length > 0 && (
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                      <label className="block text-sm font-medium text-trust-brown-700 mb-2">
                         Template Variables
                       </label>
                       <div className="space-y-3">
                         {selectedTemplate.variables.map((variable, index) => (
                           <div key={index}>
-                            <label className="text-xs text-slate-500 mb-1 block capitalize">
+                            <label className="text-xs text-trust-brown-500 mb-1 block capitalize">
                               {variable.replace(/([A-Z])/g, ' $1').trim()}
                             </label>
                             <input
                               type="text"
                               value={variables[variable] || ''}
                               onChange={(e) => setVariables({ ...variables, [variable]: e.target.value })}
-                              className="w-full px-4 py-2 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-teal-500 outline-none text-sm"
+                              className="w-full px-4 py-2 rounded-xl border border-orange-100 bg-orange-50/50 focus:bg-white focus:border-orange-500 outline-none text-sm"
                               placeholder={`Enter ${variable}`}
                               required
                             />
@@ -235,22 +236,22 @@ export default function DashboardPage() {
                   )}
 
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">
-                      <Image className="w-4 h-4 inline mr-2" />
+                    <label className="block text-sm font-medium text-trust-brown-700 mb-2">
+                      <ImageIcon className="w-4 h-4 inline mr-2" />
                       Image URL (Optional)
                     </label>
                     <input
                       type="url"
                       value={formData.imageUrl}
                       onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all outline-none"
+                      className="w-full px-4 py-3 rounded-xl border border-orange-100 bg-orange-50/50 focus:bg-white focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all outline-none"
                       placeholder="https://example.com/image.jpg"
                     />
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                      <label className="block text-sm font-medium text-trust-brown-700 mb-2">
                         <Users className="w-4 h-4 inline mr-2" />
                         Audience
                       </label>
@@ -258,7 +259,7 @@ export default function DashboardPage() {
                         <select
                           value={formData.audience}
                           onChange={(e) => setFormData({ ...formData, audience: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-teal-500 outline-none appearance-none"
+                          className="w-full px-4 py-3 rounded-xl border border-orange-100 bg-orange-50/50 focus:bg-white focus:border-orange-500 outline-none appearance-none"
                           required
                         >
                           <option value="">Select audience</option>
@@ -266,12 +267,12 @@ export default function DashboardPage() {
                             <option key={option} value={option}>{option}</option>
                           ))}
                         </select>
-                        <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
+                        <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-trust-brown/40 pointer-events-none" />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                      <label className="block text-sm font-medium text-trust-brown-700 mb-2">
                         <Globe className="w-4 h-4 inline mr-2" />
                         Language
                       </label>
@@ -279,14 +280,14 @@ export default function DashboardPage() {
                         <select
                           value={formData.language}
                           onChange={(e) => setFormData({ ...formData, language: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-teal-500 outline-none appearance-none"
+                          className="w-full px-4 py-3 rounded-xl border border-orange-100 bg-orange-50/50 focus:bg-white focus:border-orange-500 outline-none appearance-none"
                           required
                         >
                           {LANGUAGES.map((lang) => (
                             <option key={lang.code} value={lang.code}>{lang.name}</option>
                           ))}
                         </select>
-                        <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
+                        <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-trust-brown/40 pointer-events-none" />
                       </div>
                     </div>
                   </div>
@@ -313,7 +314,7 @@ export default function DashboardPage() {
               <button
                 type="submit"
                 disabled={sending || loadingTemplates}
-                className="w-full py-4 px-6 bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-semibold rounded-xl hover:from-teal-500 hover:to-cyan-400 transition-all duration-300 shadow-lg shadow-teal-500/25 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full py-4 px-6 bg-gradient-to-r from-orange-600 to-red-500 text-white font-semibold rounded-xl hover:from-orange-500 hover:to-red-400 transition-all duration-300 shadow-lg shadow-orange-500/25 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {sending ? (
                   <>
@@ -331,43 +332,43 @@ export default function DashboardPage() {
           </div>
 
           <div className="space-y-6">
-            <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-lg shadow-teal-500/10 border border-white/50 p-6">
-              <h3 className="font-montserrat font-semibold text-lg text-slate-800 mb-4">Template Preview</h3>
+            <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-lg shadow-orange-500/10 border border-white/50 p-6">
+              <h3 className="font-montserrat font-semibold text-lg text-trust-brown-800 mb-4">Template Preview</h3>
               {selectedTemplate ? (
                 <div className="space-y-3">
                   <div className="text-sm">
-                    <span className="text-slate-500">Name:</span>
-                    <span className="ml-2 font-medium text-slate-700">{selectedTemplate.name}</span>
+                    <span className="text-trust-brown-500">Name:</span>
+                    <span className="ml-2 font-medium text-trust-brown-700">{selectedTemplate.name}</span>
                   </div>
                   <div className="text-sm">
-                    <span className="text-slate-500">Language:</span>
-                    <span className="ml-2 font-medium text-slate-700">{selectedTemplate.language}</span>
+                    <span className="text-trust-brown-500">Language:</span>
+                    <span className="ml-2 font-medium text-trust-brown-700">{selectedTemplate.language}</span>
                   </div>
                   <div className="text-sm">
-                    <span className="text-slate-500">Category:</span>
-                    <span className="ml-2 font-medium text-slate-700">{selectedTemplate.category}</span>
+                    <span className="text-trust-brown-500">Category:</span>
+                    <span className="ml-2 font-medium text-trust-brown-700">{selectedTemplate.category}</span>
                   </div>
-                  <div className="mt-3 p-3 bg-slate-50 rounded-lg">
-                    <p className="text-sm text-slate-600">
+                  <div className="mt-3 p-3 bg-orange-50 rounded-lg">
+                    <p className="text-sm text-trust-brown-600">
                       {selectedTemplate.components.find(c => c.type === 'BODY')?.text || 'No body text'}
                     </p>
                   </div>
                 </div>
               ) : (
-                <p className="text-slate-400 text-sm">Select a template to preview</p>
+                <p className="text-trust-brown/40 text-sm">Select a template to preview</p>
               )}
             </div>
 
-            <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-lg shadow-teal-500/10 border border-white/50 p-6">
-              <h3 className="font-montserrat font-semibold text-lg text-slate-800 mb-4">Quick Stats</h3>
+            <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-lg shadow-orange-500/10 border border-white/50 p-6">
+              <h3 className="font-montserrat font-semibold text-lg text-trust-brown-800 mb-4">Quick Stats</h3>
               <div className="space-y-3">
                 <div className="flex justify-between text-sm">
-                  <span className="text-slate-500">Available Templates</span>
-                  <span className="font-medium text-slate-700">{templates.length}</span>
+                  <span className="text-trust-brown-500">Available Templates</span>
+                  <span className="font-medium text-trust-brown-700">{templates.length}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-slate-500">Audience Lists</span>
-                  <span className="font-medium text-slate-700">{AUDIENCE_OPTIONS.length}</span>
+                  <span className="text-trust-brown-500">Audience Lists</span>
+                  <span className="font-medium text-trust-brown-700">{AUDIENCE_OPTIONS.length}</span>
                 </div>
               </div>
             </div>
