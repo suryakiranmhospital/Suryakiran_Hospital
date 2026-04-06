@@ -37,7 +37,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <div className="relative w-40 h-16">
                   <Image
-                    src="/images/BHPL.jpg"
+                    src="/images/BHPL.jpeg"
                     alt="Billore Hospital Private Limited"
                     fill
                     className="object-contain"
