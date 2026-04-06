@@ -38,7 +38,7 @@ export default function Footer() {
                 <div className="relative w-40 h-16">
                   <Image
                     src="/images/BHPL.jpeg"
-                    alt="Billore Hospital Private Limited"
+                    alt="Billore Hospital Pvt. Ltd."
                     fill
                     className="object-contain"
                   />
