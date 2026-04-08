@@ -16,11 +16,7 @@ const navLinks = [
   { name: "Contact", href: "/#contact" },
 ];
 
-const languageLabels: Record<Language, string> = {
-  en: "EN",
-  hi: "हिं",
-  mr: "मर"
-};
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +48,12 @@ export default function Navbar() {
     const nextIndex = (currentIndex + 1) % langs.length;
     setLanguage(langs[nextIndex]);
   };
+
+  const languageLabels: Record<Language, string> = {
+  en: "ENGLISH",
+  hi: "हिंदी",
+  mr: "मराठी"
+};
 
   const getNavName = (key: string): string => {
     const keyMap: Record<string, string> = {
@@ -93,8 +95,8 @@ export default function Navbar() {
 
           {/* Contact Button & Language Dropdown & Mobile Menu */}
           <div className="flex items-center gap-2">
-            {/* Language Dropdown */}
-            <div className="relative language-dropdown">
+            {/* Language Dropdown - Desktop Only */}
+            <div className="hidden lg:block relative language-dropdown">
               <button
                 onClick={() => setLanguageDropdown(!languageDropdown)}
                 className="p-2 rounded-full hover:bg-orange-50 transition-colors duration-300 flex items-center gap-1"
@@ -142,14 +144,6 @@ export default function Navbar() {
               {t('login')}
             </Link>
 
-            <Link
-              href="/appointment"
-              className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-heal-50 text-heal-600 font-medium hover:bg-heal-100 transition-colors duration-300"
-            >
-              <Phone className="w-4 h-4" />
-              <span>{t('bookAppointment')}</span>
-            </Link>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -161,6 +155,48 @@ export default function Navbar() {
                 <Menu className="w-6 h-6 text-trust-brown" />
               )}
             </button>
+
+            {/* Mobile Language Dropdown - Right of Nav Bar */}
+            <div className="lg:hidden relative language-dropdown">
+              <button
+                onClick={() => setLanguageDropdown(!languageDropdown)}
+                className="p-2 rounded-full hover:bg-orange-50 transition-colors duration-300 flex items-center gap-1"
+                title="Change Language"
+              >
+                <Globe className="w-5 h-5 text-trust-brown" />
+                <ChevronDown className={`w-3 h-3 text-trust-brown transition-transform ${languageDropdown ? 'rotate-180' : ''}`} />
+              </button>
+              {languageDropdown && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="absolute right-0 mt-2 w-32 bg-white rounded-xl shadow-lg border border-orange-100 py-2 z-50"
+                >
+                  {(['en', 'hi', 'mr'] as Language[]).map((lang) => (
+                    <button
+                      key={lang}
+                      onClick={() => {
+                        setLanguage(lang);
+                        setLanguageDropdown(false);
+                      }}
+                      className={`w-full text-left px-4 py-2 hover:bg-orange-50 transition-colors ${
+                        language === lang ? 'text-orange-600 font-semibold' : 'text-trust-brown'
+                      }`}
+                    >
+                      {languageLabels[lang]}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </div>
+
+            <Link
+              href="/appointment"
+              className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-heal-50 text-heal-600 font-medium hover:bg-heal-100 transition-colors duration-300"
+            >
+              <Phone className="w-4 h-4" />
+              <span>{t('bookAppointment')}</span>
+            </Link>
           </div>
         </div>
       </div>
