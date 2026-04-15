@@ -13,7 +13,7 @@ const doctors = [
     degree: "M.S. (Gen. Surgery)",
     descriptionKey: "drMahimaDesc",
     timingKey: "drMahimaTiming",
-    image: "/images/mmahima.jpg",
+    image: "/images/mahima.jpg",
   },
   {
     nameKey: "drAbhishiek",
