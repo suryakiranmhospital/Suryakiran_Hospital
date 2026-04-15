@@ -125,18 +125,14 @@ export default function Hero() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 text-center border-t">
+              <div className="grid grid-cols-2 text-center border-t">
                 <div className="p-4">
                   <Counter endValue={13} suffix="+" />
                   <p className="text-xs">{t("years")}</p>
                 </div>
                 <div className="p-4">
-                  <Counter endValue={5} suffix="+" />
+                  <Counter endValue={10} suffix="+" />
                   <p className="text-xs">{t("doctorsLabel")}</p>
-                </div>
-                <div className="p-4">
-                  <Counter endValue={150} suffix="+" />
-                  <p className="text-xs">{t("reviews")}</p>
                 </div>
               </div>
             </div>
