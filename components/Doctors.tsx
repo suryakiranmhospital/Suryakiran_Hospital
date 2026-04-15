@@ -38,7 +38,7 @@ const doctors = [
     degree: "M.B.B.S., DGO",
     descriptionKey: "drSangitaDesc",
     timingKey: "drSangitaTiming",
-    image: "/images/sangitaa.jpg",
+    image: "/images/sangitaa.png",
   },
   {
     nameKey: "drSushila",
