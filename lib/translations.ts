@@ -20,7 +20,6 @@ export const translations = {
     availability: "24/7 Availability",
     years: "Years",
     doctorsLabel: "Doctors",
-    reviews: "Reviews",
     heroDesc1: "Serving the community with unwavering commitment",
     heroDesc2: "Specialized treatment for all age groups",
     heroDesc3: "Round-the-clock healthcare services",
@@ -36,7 +35,6 @@ export const translations = {
     yearsExperience: "Years Experience",
     patientsServed: "Patients Served",
     expertDoctorsLabel: "Expert Doctors",
-    star : "Star  ",
 
     // Services
     servicesTitle: "Comprehensive Healthcare Services",
@@ -469,3 +467,4 @@ export const translations = {
 };
 
 export type Language = 'en' | 'hi' | 'mr';
+
