@@ -15,6 +15,7 @@ const doctors = [
   { nameKey: "drAbhishiek", specialtyKey: "drAbhishiekSpecialty", timingKey: "drAbhishiekTiming" },
   { nameKey: "drSushila", specialtyKey: "drSushilaSpecialty", timingKey: "drSushilaTiming" },
   { nameKey: "drNikunj", specialtyKey: "drNikunjSpecialty", timingKey: "drNikunjTiming" },
+  { name: "Hospital 24*7 RMO", specialty: "Resident Medical Officer", timing: "Round the Clock" },
 ];
 
 export default function AppointmentPage() {
@@ -90,7 +91,7 @@ export default function AppointmentPage() {
                 {t('thankYou')}
               </p>
               <p className="text-trust-brown/70">
-                {t('emergencyNote')} <strong>+91 22 4963 4780</strong>
+                {t('emergencyNote')} <strong>+91 2249634780,+91 8433534780</strong>
               </p>
               <button
                 onClick={() => {
@@ -139,7 +140,7 @@ export default function AppointmentPage() {
               <div className="flex flex-wrap gap-4 mb-8 p-4 bg-orange-50 rounded-xl">
                 <div className="flex items-center gap-2 text-trust-brown">
                   <Phone className="w-4 h-4" />
-                  <span className="text-sm">+91 22 4963 4780</span>
+                  <span className="text-sm">+91 2249634780,+91 8879634780</span>
                 </div>
                 <div className="flex items-center gap-2 text-trust-brown">
                   <Clock className="w-4 h-4" />
@@ -216,9 +217,9 @@ export default function AppointmentPage() {
                     required
                   >
                     <option value="">{t('selectDoctor')}</option>
-                    {doctors.map((doc) => (
-                      <option key={doc.nameKey} value={t(doc.nameKey as any)}>
-                        {t(doc.nameKey as any)} - {t(doc.specialtyKey as any)} ({t(doc.timingKey as any)})
+                    {doctors.map((doc, index) => (
+                      <option key={doc.nameKey || `rmo-${index}`} value={doc.name ? doc.name : t(doc.nameKey as any)}>
+                        {doc.name ? `${doc.name} - ${doc.specialty} (${doc.timing})` : `${t(doc.nameKey as any)} - ${t(doc.specialtyKey as any)} (${t(doc.timingKey as any)})`}
                       </option>
                     ))}
                   </select>
@@ -230,6 +231,11 @@ export default function AppointmentPage() {
                     name="date"
                     value={formData.date}
                     onChange={handleChange}
+                    min={(() => {
+                      const tomorrow = new Date();
+                      tomorrow.setDate(tomorrow.getDate() + 1);
+                      return tomorrow.toISOString().split('T')[0];
+                    })()}
                     required
                   />
                 </div>
