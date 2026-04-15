@@ -14,7 +14,7 @@ export const translations = {
     heroNewLine1: "We are Together for",
     heroNewLine2: "Your Healthcare Needs",
     heroTitle: "Your Trusted Healthcare Partner",
-    heroSubtitle: "Providing compassionate, comprehensive healthcare for over 13 years. Experience world-class medical services with a personal touch.",
+    heroSubtitle: "Providing compassionate, comprehensive healthcare for over 13 years. Experience our medical services with a personal touch.",
     yearsTrust: "Years of Trust",
     expertCare: "Expert Care",
     availability: "24/7 Availability",
@@ -90,7 +90,7 @@ export const translations = {
     // Gallery
     ourFacilities: "Our Facilities",
     galleryTitle: "Photo Gallery",
-    gallerySubtitle: "Explore our state-of-the-art facilities and hospital infrastructure.",
+    gallerySubtitle: "Explore our facilities and hospital infrastructure.",
     frontView: "Front View",
     entrance: "Entrance",
     reception: "Reception",
