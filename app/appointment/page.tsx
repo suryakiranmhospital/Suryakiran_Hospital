@@ -9,12 +9,16 @@ import { useLanguage } from '@/context/LanguageContext';
 
 const doctors = [
   { nameKey: "drMahima", specialtyKey: "drMahimaSpecialty", timingKey: "drMahimaTiming" },
+  { nameKey: "drAbhishiek", specialtyKey: "drAbhishiekSpecialty", timingKey: "drAbhishiekTiming" },
   { nameKey: "drNilesh", specialtyKey: "drNileshSpecialty", timingKey: "drNileshTiming" },
   { nameKey: "drSangita", specialtyKey: "drSangitaSpecialty", timingKey: "drSangitaTiming" },
-  { nameKey: "drHemal", specialtyKey: "drHemalSpecialty", timingKey: "drHemalTiming" },
-  { nameKey: "drAbhishiek", specialtyKey: "drAbhishiekSpecialty", timingKey: "drAbhishiekTiming" },
   { nameKey: "drSushila", specialtyKey: "drSushilaSpecialty", timingKey: "drSushilaTiming" },
+  { nameKey: "drHemal", specialtyKey: "drHemalSpecialty", timingKey: "drHemalTiming" },
   { nameKey: "drNikunj", specialtyKey: "drNikunjSpecialty", timingKey: "drNikunjTiming" },
+  {nameKey: "drArchana", specialtyKey: "drArchanaSpecialty",timingKey: "drArchanaTiming"},
+  {nameKey: "drShruti", specialtyKey: "drShrutiSpecialty", timingKey: "drShrutiTiming"},
+  {nameKey: "drRushabh", specialtyKey: "drRushabhSpecialty", timingKey: "drRushabhTiming"},
+  {nameKey: "drSuvarna", specialtyKey: "drSuvarnaSpecialty", timingKey: "drSuvarnaTiming"},
   { name: "Hospital 24*7 RMO", specialty: "Resident Medical Officer", timing: "Round the Clock" },
 ];
 
