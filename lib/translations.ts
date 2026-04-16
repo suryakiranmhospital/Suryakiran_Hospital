@@ -159,6 +159,26 @@ export const translations = {
     drNikunjDesc: "Consulting Physician",
     drNikunjTiming: "6:00 pm to 8:00 pm",
 
+    drArchana: "Dr. Archana S Waghela",
+    drArchanaSpecialty: "Obstetrician & Gynecologist",
+    drArchanaDesc: "Laparoscopy & Infertility Specialist",
+    drArchanaTiming: "On-Call",
+
+    drShruti: "Dr. Shruti Thakkar",
+    drShrutiSpecialty: "Homeopathy",
+    drShrutiDesc: " ",
+    drShrutiTiming: "On-Call",
+
+    drRushabh: "Dr. Rushabh V. Daga",
+    drRushabhSpecialty: "Consultant Urologist",
+    drRushabhDesc: "Andrologist, Laproscopic and Uro Onco Surgeon",
+    drRushabhTiming: "On-Call",
+
+    drSuvarna: "Dr. Suvarna Achrekar",
+    drSuvarnaSpecialty: "Medical Oncology",
+    drSuvarnaDesc: " ",
+    drSuvarnaTiming: "On-Call",
+
     hospitalRMO: "Hospital 24*7 RMO",
     hospitalRMOSpecialty: "Resident Medical Officer",
     hospitalRMOTiming: "Round the Clock",
@@ -326,6 +346,26 @@ export const translations = {
     drNikunjDesc: "कंसल्टिंग फिजिशियन",
     drNikunjTiming: "शाम 6:00 से 8:00 बजे तक",
 
+    drArchana: "डॉ. अर्चना एस वाघेला",
+    drArchanaSpecialty: "ऑब्स्टेट्रिशियन और गायनेकोलॉजिस्ट",
+    drArchanaDesc: "लैपरोस्कोपी और इनफर्टिलिटी स्पेशलिस्ट",
+    drArchanaTiming: "ऑन-कॉल",
+
+    drShruti: "डॉ. श्रुति ठाकर",
+    drShrutiSpecialty: "होमियोपैथिक साइकियाट्रिस्ट",
+    drShrutiDesc: "MD, MA (काउंसलिंग साइकोलॉजी)",
+    drShrutiTiming: "ऑन-कॉल",
+
+    drRushabh: "डॉ. रुशभ वी. दागा",
+    drRushabhSpecialty: "कंसल्टिंग यूरोलॉजिस्ट",
+    drRushabhDesc: "M.B.B.S., M.S., M.Ch. (यूरोलॉजी)",
+    drRushabhTiming: "ऑन-कॉल",
+
+    drSuvarna: "डॉ. सूवर्णा अचरेकर",
+    drSuvarnaSpecialty: "मेडिकल ऑन्कोलॉजी",
+    drSuvarnaDesc: "M.B.B.S., DCH, MD",
+    drSuvarnaTiming: "ऑन-कॉल",
+
     hospitalRMO: "अस्पताल 24*7 आरएमओ",
     hospitalRMOSpecialty: "रेसिडेंट मेडिकल ऑफिसर",
     hospitalRMOTiming: "24 घंटे उपलब्ध",
@@ -492,6 +532,26 @@ export const translations = {
     drNikunjSpecialty: "फिजिशियन",
     drNikunjDesc: "कंसल्टिंग फिजिशियन",
     drNikunjTiming: "संध्याकाळी 6:00 ते 8:00 वाजेपर्यंत",
+
+    drArchana: "डॉ. अर्चना एस वाघेला",
+    drArchanaSpecialty: "ऑब्स्टेट्रिशियन आणि गायनेकोलॉजिस्ट",
+    drArchanaDesc: "लैपरोस्कोपी आणि इनफर्टिलिटी स्पेशलिस्ट",
+    drArchanaTiming: "ऑन-कॉल",
+
+    drShruti: "डॉ. श्रुति ठाकर",
+    drShrutiSpecialty: "होमियोपैथिक सायकियाट्रिस्ट",
+    drShrutiDesc: "MD, MA (काउंसलिंग सायकोलॉजी)",
+    drShrutiTiming: "ऑन-कॉल",
+
+    drRushabh: "डॉ. रुशभ वी. दागा",
+    drRushabhSpecialty: "कंसल्टिंग यूरोलॉजिस्ट",
+    drRushabhDesc: "M.B.B.S., M.S., M.Ch. (यूरोलॉजी)",
+    drRushabhTiming: "ऑन-कॉल",
+
+    drSuvarna: "डॉ. सूवर्णा अचरेकर",
+    drSuvarnaSpecialty: "मेडिकल ऑन्कोलॉजी",
+    drSuvarnaDesc: "M.B.B.S., DCH, MD",
+    drSuvarnaTiming: "ऑन-कॉल",
 
     hospitalRMO: "रुग्णालय 24*7 आरएमओ",
     hospitalRMOSpecialty: "रेसिडेंट मेडिकल ऑफिसर",
