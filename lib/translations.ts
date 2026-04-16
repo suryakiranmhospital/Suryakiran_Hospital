@@ -307,12 +307,12 @@ export const translations = {
     "Chest TB-desc": "फेफड़ों के स्वास्थ्य और टीबी उपचार के लिए उन्नत निदान और प्रभावी उपचार के साथ केंद्रित श्वसन देखभाल।",
 
     // Social Initiative
-    socialInitiative: "बिलोर हॉस्पिटल प्राइवेट लिमिटेड का एक सामाजिक पहल",
+    socialInitiative: " बिलोर हॉस्पिटल प्राइवेट लिमिटेड की एक सामाजिक पहल।",
 
-    // Doctor Names
+// Doctor Names
     drMahima: "डॉ. महिमा (मिश्रा) बिलोरे",
     drMahimaSpecialty: "जनरल सर्जन",
-    drMahimaDesc: "GI, ब्रेस्ट और लैपरोस्कोपिक सर्जन",
+    drMahimaDesc: "GI, ब्रेस्ट एवं लैपरोस्कोपिक सर्जन",
     drMahimaTiming: "दोपहर 12:00 से 02:00 बजे तक",
 
     drAbhishiek: "डॉ. अभिषीक एस. जैपुरिया",
@@ -322,23 +322,23 @@ export const translations = {
     drAbhishiekNote: "गुरुवार और रविवार को कोई OPD नहीं",
 
     drNilesh: "डॉ. नीलेश घोरपड़े",
-    drNileshSpecialty: "फिजिशियन और कार्डियोलॉजिस्ट",
-    drNileshDesc: "कार्डियोलॉजिस्ट और डायबिटोलॉजिस्ट",
+    drNileshSpecialty: "फिजिशियन एवं कार्डियोलॉजिस्ट",
+    drNileshDesc: "कार्डियोलॉजिस्ट एवं डायबिटोलॉजिस्ट",
     drNileshTiming: "शाम 8:30 से 10:30 बजे तक",
 
     drSangita: "डॉ. संगीता चटर्जी",
-    drSangitaSpecialty: "ऑब्स्टेट्रिशियन और गायनेकोलॉजिस्ट",
-    drSangitaDesc: "कंसल्टिंग ऑब्स्टेट्रिशियन और गायनेकोलॉजिस्ट",
+    drSangitaSpecialty: "ऑब्स्टेट्रिशियन एवं गायनेकोलॉजिस्ट",
+    drSangitaDesc: "कंसल्टिंग ऑब्स्टेट्रिशियन एवं गायनेकोलॉजिस्ट",
     drSangitaTiming: "सुबह 10:30 से 11:30 बजे तक",
 
     drSushila: "डॉ. सुशीला बावा",
-    drSushilaSpecialty: "ऑब्स्टेट्रिशियन और गायनेकोलॉजिस्ट",
-    drSushilaDesc: "कंसल्टिंग ऑब्स्टेट्रिशियन और गायनेकोलॉजिस्ट",
+    drSushilaSpecialty: "ऑब्स्टेट्रिशियन एवं गायनेकोलॉजिस्ट",
+    drSushilaDesc: "कंसल्टिंग ऑब्स्टेट्रिशियन एवं गायनेकोलॉजिस्ट",
     drSushilaTiming: "शाम 4:00 से 5:00 बजे तक",
 
     drHemal: "डॉ. हेमल मिस्त्री",
     drHemalSpecialty: "बाल विशेषज्ञ",
-    drHemalDesc: "बाल विशेषज्ञ",
+    drHemalDesc: "बाल रोग विशेषज्ञ",
     drHemalTiming: "शाम 6:00 से 7:00 बजे तक",
 
     drNikunj: "डॉ. निकुंज बावीशी",
@@ -347,23 +347,23 @@ export const translations = {
     drNikunjTiming: "शाम 6:00 से 8:00 बजे तक",
 
     drArchana: "डॉ. अर्चना एस वाघेला",
-    drArchanaSpecialty: "ऑब्स्टेट्रिशियन और गायनेकोलॉजिस्ट",
-    drArchanaDesc: "लैपरोस्कोपी और इनफर्टिलिटी स्पेशलिस्ट",
+    drArchanaSpecialty: "ऑब्स्टेट्रिशियन एवं गायनेकोलॉजिस्ट",
+    drArchanaDesc: "लैपरोस्कोपी एवं इनफर्टिलिटी स्पेशलिस्ट",
     drArchanaTiming: "ऑन-कॉल",
 
     drShruti: "डॉ. श्रुति ठाकर",
-    drShrutiSpecialty: "होमियोपैथिक साइकियाट्रिस्ट",
-    drShrutiDesc: "MD, MA (काउंसलिंग साइकोलॉजी)",
+    drShrutiSpecialty: "होमियोपैथी",
+    drShrutiDesc: "  ",
     drShrutiTiming: "ऑन-कॉल",
 
     drRushabh: "डॉ. रुशभ वी. दागा",
     drRushabhSpecialty: "कंसल्टिंग यूरोलॉजिस्ट",
-    drRushabhDesc: "M.B.B.S., M.S., M.Ch. (यूरोलॉजी)",
+    drRushabhDesc: "एंड्रोलॉजिस्ट, लैपरोस्कोपिक एवं यूरो ऑंको सर्जन",
     drRushabhTiming: "ऑन-कॉल",
 
     drSuvarna: "डॉ. सूवर्णा अचरेकर",
     drSuvarnaSpecialty: "मेडिकल ऑन्कोलॉजी",
-    drSuvarnaDesc: "M.B.B.S., DCH, MD",
+    drSuvarnaDesc: " ",
     drSuvarnaTiming: "ऑन-कॉल",
 
     hospitalRMO: "अस्पताल 24*7 आरएमओ",
@@ -496,7 +496,7 @@ export const translations = {
     // Social Initiative
     socialInitiative: "बिलोर हॉस्पिटल प्रायव्हेट लिमिटेडची एक सामाजिक पहल",
 
-    // Doctor Names
+// Doctor Names
     drMahima: "डॉ. महिमा (मिश्रा) बिलोरे",
     drMahimaSpecialty: "जनरल सर्जन",
     drMahimaDesc: "GI, ब्रेस्ट आणि लैपरोस्कोपिक सर्जन",
@@ -525,7 +525,7 @@ export const translations = {
 
     drHemal: "डॉ. हेमल मिस्त्री",
     drHemalSpecialty: "बाल विशेषज्ञ",
-    drHemalDesc: "बाल विशेषज्ञ",
+    drHemalDesc: "बाल रोग विशेषज्ञ",
     drHemalTiming: "संध्याकाळी 6:00 ते 7:00 वाजेपर्यंत",
 
     drNikunj: "डॉ. निकुंज बावीशी",
@@ -539,18 +539,18 @@ export const translations = {
     drArchanaTiming: "ऑन-कॉल",
 
     drShruti: "डॉ. श्रुति ठाकर",
-    drShrutiSpecialty: "होमियोपैथिक सायकियाट्रिस्ट",
-    drShrutiDesc: "MD, MA (काउंसलिंग सायकोलॉजी)",
+    drShrutiSpecialty: "होमियोपैथी",
+    drShrutiDesc: "  ",
     drShrutiTiming: "ऑन-कॉल",
 
     drRushabh: "डॉ. रुशभ वी. दागा",
     drRushabhSpecialty: "कंसल्टिंग यूरोलॉजिस्ट",
-    drRushabhDesc: "M.B.B.S., M.S., M.Ch. (यूरोलॉजी)",
+    drRushabhDesc: "एंड्रोलॉजिस्ट, लैपरोस्कोपिक आणि यूरो ऑंको सर्जन",
     drRushabhTiming: "ऑन-कॉल",
 
     drSuvarna: "डॉ. सूवर्णा अचरेकर",
     drSuvarnaSpecialty: "मेडिकल ऑन्कोलॉजी",
-    drSuvarnaDesc: "M.B.B.S., DCH, MD",
+    drSuvarnaDesc: " ",
     drSuvarnaTiming: "ऑन-कॉल",
 
     hospitalRMO: "रुग्णालय 24*7 आरएमओ",
