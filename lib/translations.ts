@@ -146,7 +146,7 @@ export const translations = {
 
     drSushila: "Dr. Sushila Bawa",
     drSushilaSpecialty: "Obstetrician & Gynaecologist",
-    drSushilaDesc: "Consulting Obstetrician & Gynaecologist",
+    drSushilaDesc: "Aesthetic & Cosmetic Gynaecologist",
     drSushilaTiming: "4:00 pm to 5:00 pm",
 
     drHemal: "Dr. Hemal Mistry",
@@ -333,7 +333,7 @@ export const translations = {
 
     drSushila: "डॉ. सुशीला बावा",
     drSushilaSpecialty: "ऑब्स्टेट्रिशियन एवं गायनेकोलॉजिस्ट",
-    drSushilaDesc: "कंसल्टिंग ऑब्स्टेट्रिशियन एवं गायनेकोलॉजिस्ट",
+    drSushilaDesc: "सौंदर्य एवं प्रसाधन सामग्री गायनेकोलॉजिस्ट",
     drSushilaTiming: "शाम 4:00 से 5:00 बजे तक",
 
     drHemal: "डॉ. हेमल मिस्त्री",
@@ -520,7 +520,7 @@ export const translations = {
 
     drSushila: "डॉ. सुशीला बावा",
     drSushilaSpecialty: "ऑब्स्टेट्रिशियन आणि गायनेकोलॉजिस्ट",
-    drSushilaDesc: "कंसल्टिंग ऑब्स्टेट्रिशियन आणि गायनेकोलॉजिस्ट",
+    drSushilaDesc: "सौंदर्य आणि सौंदर्यप्रसाधने गायनेकोलॉजिस्ट",
     drSushilaTiming: "संध्याकाळी 4:00 ते 5:00 वाजेपर्यंत",
 
     drHemal: "डॉ. हेमल मिस्त्री",
