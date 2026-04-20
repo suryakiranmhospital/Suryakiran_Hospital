@@ -95,7 +95,7 @@ export default function AppointmentPage() {
                 {t('thankYou')}
               </p>
               <p className="text-trust-brown/70">
-                {t('emergencyNote')} <strong>+91 2249634780,+91 8433534780</strong>
+                {t('emergencyNote')} <strong>+91 2249634780,+91 8433534780,+91 8879634780</strong>
               </p>
               <button
                 onClick={() => {
