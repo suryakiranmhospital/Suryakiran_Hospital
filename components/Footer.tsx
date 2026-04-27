@@ -81,9 +81,9 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="text-white/70 text-sm hover:text-heal-400 transition-colors"
                   >
-                    1st Floor, Near Kranti Nagar Auto Stand,<br />
-                    Akruli Road, Kandivali East,<br />
-                    Mumbai-400101, Maharashtra
+                    1st Floor, Suryakiran Tower, Akurli Rd,<br />
+                MHADA Colony, Lokhandwala Twp, Kandivali East,<br />
+                Mumbai-400101, Maharashtra
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
