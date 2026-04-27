@@ -52,8 +52,8 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 className="text-trust-brown/70 text-sm hover:text-orange-600 transition-colors"
               >
-                1st Floor, Near Kranti Nagar Auto Stand,<br />
-                Akruli Road, Kandivali East,<br />
+                1st Floor, Suryakiran Tower, Akurli Rd,<br />
+                MHADA Colony, Lokhandwala Twp, Kandivali East,<br />
                 Mumbai-400101, Maharashtra
               </a>
             </motion.div>
