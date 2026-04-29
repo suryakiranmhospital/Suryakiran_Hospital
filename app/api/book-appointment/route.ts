@@ -1,12 +1,10 @@
-export const runtime = 'nodejs';
-
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { createTransporter, buildAppointmentEmail } from '@/lib/email';
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-
+    
     const webhookUrl = process.env.N8N_APPOINTMENT_WEBHOOK_URL;
     const gmailUser = process.env.GMAIL_USER;
     const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
@@ -19,27 +17,11 @@ export async function POST(request: Request) {
     }
 
     // Create nodemailer transporter
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: gmailUser,
-        pass: gmailAppPassword,
-      },
-    });
+    const transporter = createTransporter();
 
-    // Prepare email HTML
-    const emailHtml = `
-      <h2>New Appointment Request</h2>
-      <p><strong>Name:</strong> ${body.firstName} ${body.lastName}</p>
-      <p><strong>Phone:</strong> ${body.phone}</p>
-      <p><strong>Email:</strong> ${body.email || 'Not provided'}</p>
-      <p><strong>Doctor:</strong> ${body.doctor}</p>
-      <p><strong>Preferred Date:</strong> ${body.date}</p>
-      <p><strong>Message/Symptoms:</strong> ${body.message || 'None'}</p>
-      <hr>
-      <p><em>Submitted on: ${new Date().toLocaleString()}</em></p>
-    `;
-
+    // Prepare email options
+    const emailOptions = buildAppointmentEmail(body);
+    
     // Run webhook + email in parallel
     const [webhookResult, emailResult] = await Promise.allSettled([
       // Webhook call
@@ -49,12 +31,7 @@ export async function POST(request: Request) {
         body: JSON.stringify(body),
       }),
       // Email send
-      transporter.sendMail({
-        from: gmailUser,
-        to: 'suryakiran.m.hospital@gmail.com',
-        subject: `New Appointment Request - ${body.firstName} ${body.lastName}`,
-        html: emailHtml,
-      }),
+      transporter.sendMail(emailOptions),
     ]);
 
     // Check webhook result (primary success criteria)
@@ -65,8 +42,8 @@ export async function POST(request: Request) {
       }
       return NextResponse.json({ success: true, message: 'Appointment request submitted successfully' });
     } else {
-      const errorText = webhookResult.status === 'fulfilled'
-        ? await webhookResult.value.text()
+      const errorText = webhookResult.status === 'fulfilled' 
+        ? await webhookResult.value.text() 
         : webhookResult.reason;
       return NextResponse.json(
         { success: false, error: 'Failed to submit appointment request' },
